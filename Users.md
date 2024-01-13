@@ -30,7 +30,14 @@ Delete user and user directories
 > \# userdel -r username
 
 ## Modification
+Change username
+> \# usermod -l newusername oldusername
+
+Change UID
+> \# usermod -u UID username
+
 Add existing user to existing group 
+
 (Overrides existing primary)
 > \# usermod -g groupname username
 
@@ -42,6 +49,18 @@ Add existing user to existing group
 
 Change home directory of a user
 > \# usermod -d /home/newfolder username
+
+Change default shell of a user
+> \# usermod -s /bin/zsh username
+
+Lock user account (user will not be able to log in to the system)
+> \# usermod -L username
+
+Unlock user account
+> \# usermod -U username
+
+Set an expiry date to user account
+> \# usermod -e YYYY-MM-DD username
 
 ## Set/Change Password
 Set password for own account
