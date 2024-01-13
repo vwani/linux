@@ -1,7 +1,33 @@
 # Change passwords and adjust password aging for local user accounts
 
-## Change password 
+## Password Actions
+Change password for a user account
 > \# passwd username
+
+View password status for a user account
+> \# passwd -S username
+
+output fields: 
+username|status|date last changed|min age|max age|warn period|inactive period
+---|---|---|---|---|---|---|
+
+status|description
+:---:|---
+P|Usable Password
+NP|No Password
+L|Locked Password
+
+View password status for all accounts
+> \# passwd -Sa
+
+Delete password from an account (able to log in without password)
+> \# passwd -d username
+
+Lock a user account
+> \# passwd -l username
+
+Unlock user account
+> \# passwd -u username
 
 ## Adjust password aging 
 View current password aging settings
