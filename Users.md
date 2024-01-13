@@ -26,8 +26,12 @@ Option|Description
 Delete user
 > \# userdel username
 
-Delete user and user directories
+Delete user and user home directory, mail spool
 > \# userdel -r username
+
+Forceful user delete (not recommended)
+> \# userdel -f username
+Forces removal of account even if user still logged in, deletion of home directory even if shared with other users, deletion of mail spool even if not owned by specified user.
 
 ## Modification
 Change username
